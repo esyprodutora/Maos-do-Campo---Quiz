@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { 
   AlertTriangle, Bot, MapPin, WifiOff, ArrowRight, CheckCircle2, 
   ShieldCheck, Star, Users, Sprout, ShoppingCart, PieChart, 
-  Gift, Zap, PlayCircle, FileText, Headphones, CreditCard, Banknote
+  Gift, Zap, PlayCircle, FileText, Headphones, CreditCard, Banknote,
+  Smartphone, Leaf
 } from 'lucide-react';
 
 // Defined before usage to prevent ReferenceError
@@ -56,8 +57,8 @@ const Results: React.FC = () => {
             O diagnóstico apontou que a falta de gestão integrada está consumindo silenciosamente o resultado da sua colheita.
           </p>
 
-          {/* GRÁFICO DE IMPACTO REFEITO (CLEAN & IMPACTANTE) */}
-          <div className="bg-gray-50 border border-gray-200 rounded-3xl p-6 shadow-lg mb-6">
+          {/* GRÁFICO DE IMPACTO */}
+          <div className="bg-gray-50 border border-gray-200 rounded-3xl p-6 shadow-lg mb-8">
              <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-6">Projeção da Próxima Safra</h3>
              
              <div className="flex items-end justify-center gap-4 h-48 w-full max-w-xs mx-auto">
@@ -77,8 +78,8 @@ const Results: React.FC = () => {
                 {/* BARRA 2: COM APP */}
                 <div className="w-1/2 flex flex-col justify-end h-full">
                    <div className="mb-2 text-center">
-                       <span className="block text-xs text-gray-400 font-medium">Com Mãos do Campo</span>
-                       <span className="block text-lg font-black text-[#00A86B] leading-none">Lucro Real</span>
+                       <span className="block text-xs text-gray-400 font-medium">Lucro Real</span>
+                       <span className="block text-lg font-black text-[#00A86B] leading-none">+ 22%</span>
                    </div>
                    <div className="w-full bg-[#00A86B] rounded-t-xl h-[95%] relative shadow-[0_0_20px_rgba(0,168,107,0.3)] flex flex-col justify-end p-2">
                       <div className="text-center text-white/90 text-xs font-bold mb-2">+ Controle</div>
@@ -87,28 +88,51 @@ const Results: React.FC = () => {
                    </div>
                 </div>
              </div>
-             
-             <div className="mt-4 bg-red-50 text-red-800 text-xs font-bold p-3 rounded-lg border border-red-100">
-               Você está deixando dinheiro na mesa a cada dia que passa sem controle.
-             </div>
           </div>
+        </div>
 
-          <button onClick={scrollToPlans} className="w-full bg-[#00A86B] hover:bg-[#008f5b] text-white py-4 rounded-xl font-black text-lg shadow-lg shadow-green-200 transition-transform active:scale-95 flex items-center justify-center gap-2">
-            QUERO PARAR DE PERDER
-            <ArrowRight size={20} />
-          </button>
+        {/* =====================================================================================
+            2. PRODUCT REVEAL (MÃOS DO CAMPO)
+        ===================================================================================== */}
+        <div className="bg-[#004F2D] py-10 px-6 relative overflow-hidden">
+           {/* Background Pattern */}
+           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_2px,transparent_2px)] [background-size:20px_20px]"></div>
+           <div className="absolute top-0 right-0 w-32 h-32 bg-[#00A86B] blur-[60px] opacity-40"></div>
+           
+           <div className="relative z-10 text-center text-white">
+              <span className="text-[#00A86B] font-bold text-xs uppercase tracking-[0.2em] mb-3 block">Apresentando a Solução</span>
+              
+              <div className="flex items-center justify-center gap-3 mb-4">
+                 <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg transform rotate-3">
+                    <Leaf className="text-[#004F2D]" size={28} />
+                 </div>
+                 <h2 className="text-3xl font-black leading-none text-white tracking-tight">
+                    MÃOS <br/> DO CAMPO
+                 </h2>
+              </div>
+              
+              <p className="text-gray-300 text-sm leading-relaxed max-w-[280px] mx-auto mb-6">
+                 O primeiro sistema operacional de bolso feito para o produtor que quer <strong>lucro</strong>, não papelada.
+              </p>
+
+              <button onClick={scrollToPlans} className="w-full bg-white text-[#004F2D] font-black py-3 rounded-lg text-sm shadow-xl flex items-center justify-center gap-2 transform active:scale-95 transition-transform">
+                 <Smartphone size={18} />
+                 BAIXAR E RESOLVER AGORA
+              </button>
+           </div>
         </div>
       </div>
 
       {/* =====================================================================================
-          2. A SOLUÇÃO (FUNCIONALIDADES)
+          3. FUNCIONALIDADES & AI
       ===================================================================================== */}
       <div className="px-5 py-10 relative z-20">
+        
         <div className="text-center mb-8">
-          <h2 className="text-2xl font-black text-[#004F2D] leading-tight mb-2">
-            A Ferramenta Definitiva para <br/> Blindar sua Lavoura
+          <h2 className="text-xl font-black text-gray-800 leading-tight">
+            Tecnologia de Safra Recorde <br/>
+            <span className="text-[#00A86B]">No seu Bolso</span>
           </h2>
-          <p className="text-gray-500 text-xs">Simples, visual e direto ao ponto.</p>
         </div>
 
         <div className="grid grid-cols-1 gap-4 mb-8">
@@ -119,40 +143,17 @@ const Results: React.FC = () => {
               </div>
               <div>
                  <h3 className="font-bold text-gray-900 text-sm">Gestão de Etapas</h3>
-                 <p className="text-xs text-gray-500 mt-1">Controle visual do plantio à colheita. Nunca mais perca o timing de uma aplicação.</p>
+                 <p className="text-xs text-gray-500 mt-1">Nunca mais perca o timing de uma aplicação. Controle do plantio à colheita.</p>
               </div>
            </div>
-
            {/* Feature 2 */}
-           <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex gap-4 items-center">
-              <div className="bg-green-100 p-3 rounded-xl text-[#004F2D]">
-                 <ShoppingCart size={24} strokeWidth={2.5} />
-              </div>
-              <div>
-                 <h3 className="font-bold text-gray-900 text-sm">Compras e Insumos</h3>
-                 <p className="text-xs text-gray-500 mt-1">Estoque na palma da mão. Evite compras duplicadas e detecte desvios de material.</p>
-              </div>
-           </div>
-
-           {/* Feature 3 */}
            <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex gap-4 items-center">
               <div className="bg-green-100 p-3 rounded-xl text-[#004F2D]">
                  <PieChart size={24} strokeWidth={2.5} />
               </div>
               <div>
                  <h3 className="font-bold text-gray-900 text-sm">Financeiro Real</h3>
-                 <p className="text-xs text-gray-500 mt-1">Saiba o custo exato por hectare e o lucro líquido previsto antes mesmo de colher.</p>
-              </div>
-           </div>
-
-           {/* Feature 4 */}
-           <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex gap-4 items-center">
-              <div className="bg-green-100 p-3 rounded-xl text-[#004F2D]">
-                 <FileText size={24} strokeWidth={2.5} />
-              </div>
-              <div>
-                 <h3 className="font-bold text-gray-900 text-sm">Relatórios Automáticos</h3>
-                 <p className="text-xs text-gray-500 mt-1">Gere PDFs profissionais para bancos e sócios com um clique.</p>
+                 <p className="text-xs text-gray-500 mt-1">Saiba o custo exato por hectare e o lucro líquido previsto.</p>
               </div>
            </div>
         </div>
@@ -179,7 +180,7 @@ const Results: React.FC = () => {
         </div>
 
         {/* =====================================================================================
-            3. PROVA SOCIAL (AUTO SCROLL)
+            4. PROVA SOCIAL (AUTO SCROLL)
         ===================================================================================== */}
         <div className="mb-12 overflow-hidden w-full">
            <div className="flex items-center justify-center gap-2 mb-6">
@@ -217,63 +218,69 @@ const Results: React.FC = () => {
         </div>
 
         {/* =====================================================================================
-            4. BÔNUS REFORMULADOS (R$ 900 OFF)
+            5. BÔNUS REFORMULADOS (PREMIUM DARK STYLE)
         ===================================================================================== */}
-        <div className="mb-12 bg-gradient-to-b from-yellow-50 to-white rounded-3xl p-6 border border-yellow-200 shadow-sm">
-           <div className="text-center mb-6">
-              <span className="inline-block bg-yellow-400 text-black text-[10px] font-black uppercase px-3 py-1 rounded-full mb-2">Apenas Hoje</span>
-              <h3 className="font-black text-gray-900 text-xl">3 Bônus de Aceleração</h3>
-              <p className="text-xs text-gray-500 mt-1">Disponível exclusivamente no plano <strong className="text-black">Vitalício</strong></p>
+        <div className="mb-12">
+           <div className="text-center mb-4">
+              <span className="inline-block bg-[#00A86B] text-white text-[10px] font-black uppercase px-3 py-1 rounded-full mb-2 tracking-widest">Oferta Limitada</span>
+              <h3 className="font-black text-gray-900 text-xl">Leve R$ 900,00 em Bônus</h3>
+              <p className="text-xs text-gray-500 mt-1">Gratuito exclusivamente no plano <strong className="text-black">Vitalício</strong></p>
            </div>
            
-           <div className="space-y-4">
-              {/* Bonus 1 */}
-              <div className="flex gap-4 items-center bg-white p-4 rounded-xl border border-yellow-100 shadow-sm relative overflow-hidden">
-                 <div className="absolute top-0 right-0 bg-red-500 text-white text-[9px] font-bold px-2 py-0.5 rounded-bl-lg">GRÁTIS</div>
-                 <div className="h-12 w-12 bg-gray-100 rounded-full flex items-center justify-center shrink-0">
-                    <PlayCircle className="text-gray-600" size={24} />
-                 </div>
-                 <div>
-                    <h4 className="font-bold text-gray-800 text-xs uppercase">Masterclass: Lucro Máximo</h4>
-                    <p className="text-[10px] text-gray-500 mb-1">Aula estratégica: Como dobrar a margem por hectare.</p>
-                    <p className="text-[10px] font-bold text-[#00A86B]"><span className="text-gray-300 line-through font-normal mr-1">R$ 297,00</span> R$ 0,00</p>
-                 </div>
-              </div>
+           {/* Premium Bonus Container */}
+           <div className="bg-[#1A1A1A] rounded-3xl p-6 relative overflow-hidden shadow-2xl">
+              {/* Gold decorative accent */}
+              <div className="absolute top-0 right-0 w-40 h-40 bg-yellow-500 rounded-full blur-[80px] opacity-20"></div>
 
-              {/* Bonus 2 */}
-              <div className="flex gap-4 items-center bg-white p-4 rounded-xl border border-yellow-100 shadow-sm relative overflow-hidden">
-                 <div className="absolute top-0 right-0 bg-red-500 text-white text-[9px] font-bold px-2 py-0.5 rounded-bl-lg">GRÁTIS</div>
-                 <div className="h-12 w-12 bg-gray-100 rounded-full flex items-center justify-center shrink-0">
-                    <FileText className="text-gray-600" size={24} />
-                 </div>
-                 <div>
-                    <h4 className="font-bold text-gray-800 text-xs uppercase">Guia: Dedução de Imposto</h4>
-                    <p className="text-[10px] text-gray-500 mb-1">Como pagar menos imposto legalmente na atividade rural.</p>
-                    <p className="text-[10px] font-bold text-[#00A86B]"><span className="text-gray-300 line-through font-normal mr-1">R$ 197,00</span> R$ 0,00</p>
-                 </div>
-              </div>
+              <div className="space-y-4 relative z-10">
+                  {/* Bonus 1 */}
+                  <div className="flex gap-4 items-center bg-white/5 border border-white/10 p-4 rounded-xl backdrop-blur-sm">
+                    <div className="h-10 w-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center shrink-0 shadow-lg text-black">
+                        <PlayCircle size={20} />
+                    </div>
+                    <div>
+                        <h4 className="font-bold text-white text-sm">Masterclass: Lucro Máximo</h4>
+                        <p className="text-[10px] text-gray-400">Estratégia avançada de margem</p>
+                        <p className="text-[10px] font-bold text-yellow-400 mt-1">Economize R$ 297,00</p>
+                    </div>
+                  </div>
 
-              {/* Bonus 3 */}
-              <div className="flex gap-4 items-center bg-white p-4 rounded-xl border border-yellow-100 shadow-sm relative overflow-hidden">
-                 <div className="absolute top-0 right-0 bg-red-500 text-white text-[9px] font-bold px-2 py-0.5 rounded-bl-lg">GRÁTIS</div>
-                 <div className="h-12 w-12 bg-gray-100 rounded-full flex items-center justify-center shrink-0">
-                    <Headphones className="text-gray-600" size={24} />
-                 </div>
-                 <div>
-                    <h4 className="font-bold text-gray-800 text-xs uppercase">Suporte de Implantação VIP</h4>
-                    <p className="text-[10px] text-gray-500 mb-1">Atendimento prioritário para configurar sua fazenda.</p>
-                    <p className="text-[10px] font-bold text-[#00A86B]"><span className="text-gray-300 line-through font-normal mr-1">R$ 406,00</span> R$ 0,00</p>
-                 </div>
+                  {/* Bonus 2 */}
+                  <div className="flex gap-4 items-center bg-white/5 border border-white/10 p-4 rounded-xl backdrop-blur-sm">
+                    <div className="h-10 w-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center shrink-0 shadow-lg text-black">
+                        <FileText size={20} />
+                    </div>
+                    <div>
+                        <h4 className="font-bold text-white text-sm">Guia: Imposto Rural</h4>
+                        <p className="text-[10px] text-gray-400">Dedução legal de gastos</p>
+                        <p className="text-[10px] font-bold text-yellow-400 mt-1">Economize R$ 197,00</p>
+                    </div>
+                  </div>
+
+                  {/* Bonus 3 */}
+                  <div className="flex gap-4 items-center bg-white/5 border border-white/10 p-4 rounded-xl backdrop-blur-sm">
+                    <div className="h-10 w-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center shrink-0 shadow-lg text-black">
+                        <Headphones size={20} />
+                    </div>
+                    <div>
+                        <h4 className="font-bold text-white text-sm">Implantação VIP</h4>
+                        <p className="text-[10px] text-gray-400">Suporte prioritário de setup</p>
+                        <p className="text-[10px] font-bold text-yellow-400 mt-1">Economize R$ 406,00</p>
+                    </div>
+                  </div>
               </div>
-           </div>
-           
-           <div className="mt-4 text-center">
-             <span className="text-sm font-black text-gray-900 bg-yellow-300 px-3 py-1 rounded">Total em Bônus: R$ 900,00</span>
+              
+              <div className="mt-6 pt-4 border-t border-white/10 text-center">
+                 <p className="text-white text-xs font-medium">
+                    Valor total dos presentes: <span className="text-yellow-400 font-bold text-sm">R$ 900,00</span>
+                 </p>
+                 <p className="text-[10px] text-gray-500 mt-1">Sua conta sai por <span className="text-white">R$ 0,00</span> hoje.</p>
+              </div>
            </div>
         </div>
 
         {/* =====================================================================================
-            5. PRECIFICAÇÃO (PLANS)
+            6. PRECIFICAÇÃO (PLANS)
         ===================================================================================== */}
         <div id="pricing-section" className="mb-12 scroll-mt-4">
            <h3 className="text-center font-black text-gray-900 text-2xl mb-2">Escolha seu Plano</h3>
@@ -384,13 +391,20 @@ const Results: React.FC = () => {
         </div>
 
         {/* =====================================================================================
-            6. GARANTIA FINAL
+            7. GARANTIA FINAL (PREMIUM BADGE)
         ===================================================================================== */}
         <div className="bg-white rounded-t-3xl p-8 pb-12 text-center border-t border-gray-100">
-           <div className="inline-block p-3 bg-gray-50 rounded-full mb-4 border border-gray-100">
-              <ShieldCheck size={40} className="text-gray-900" />
+           <div className="relative inline-block mb-6">
+              <div className="absolute inset-0 bg-[#00A86B] opacity-20 blur-xl rounded-full"></div>
+              <div className="relative bg-white border-[3px] border-[#00A86B] rounded-full p-4 shadow-lg">
+                 <ShieldCheck size={48} className="text-[#00A86B]" />
+              </div>
+              <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-[#00A86B] text-white text-[10px] font-black uppercase px-3 py-1 rounded-full shadow-md whitespace-nowrap">
+                 Garantia Blindada
+              </div>
            </div>
-           <h4 className="font-black text-gray-900 text-lg mb-2">Risco Zero: Garantia de 30 Dias</h4>
+           
+           <h4 className="font-black text-gray-900 text-xl mb-3">Risco Zero por 30 Dias</h4>
            <p className="text-sm text-gray-500 leading-relaxed max-w-[280px] mx-auto mb-6">
               Use o Mãos do Campo. Se em 30 dias você não ver seu dinheiro render mais, nós devolvemos <strong>100% do valor pago</strong>.
            </p>
