@@ -68,14 +68,22 @@ const Intro: React.FC<IntroProps> = ({ onStart }) => {
            </div>
         </div>
 
-        {/* CTA Button */}
+        {/* CTA Button (Redesigned for Mobile) */}
         <button
           onClick={onStart}
-          className="group relative w-full bg-[#00A86B] hover:bg-[#008f5b] text-white text-lg font-bold py-5 rounded-2xl shadow-[0_0_40px_rgba(0,168,107,0.4)] transition-all transform hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-3 overflow-hidden"
+          className="group relative w-full bg-gradient-to-b from-[#00C07A] to-[#00995E] text-white p-4 rounded-xl shadow-[0_10px_30px_rgba(0,168,107,0.4)] border-t border-white/20 border-b-[5px] border-[#007F4E] active:border-b-0 active:translate-y-[5px] transition-all flex items-center justify-between hover:brightness-110 overflow-hidden"
         >
-          <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-          <span className="relative z-10">INICIAR DIAGNÓSTICO GRATUITO</span>
-          <ArrowRight className="w-6 h-6 relative z-10 group-hover:translate-x-1 transition-transform" />
+          {/* Subtle Shine Effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:animate-shimmer pointer-events-none" />
+
+          <div className="flex flex-col text-left z-10">
+            <span className="text-[10px] font-bold text-green-100 uppercase tracking-widest mb-0.5">100% Gratuito</span>
+            <span className="text-base sm:text-lg font-black leading-none tracking-tight">INICIAR DIAGNÓSTICO</span>
+          </div>
+          
+          <div className="bg-white/20 h-11 w-11 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:bg-white group-hover:text-[#00995E] transition-colors z-10 shadow-inner">
+             <ArrowRight size={22} strokeWidth={3} />
+          </div>
         </button>
         
         <p className="text-center text-[10px] text-gray-400 mt-4 font-medium uppercase tracking-widest">
