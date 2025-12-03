@@ -6,6 +6,12 @@ interface IntroProps {
 }
 
 const Intro: React.FC<IntroProps> = ({ onStart }) => {
+  const userPhotos = [
+    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=80", // Man
+    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&q=80", // Woman
+    "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=100&h=100&fit=crop&q=80"  // Man (Rural look)
+  ];
+
   return (
     <div className="flex flex-col h-full bg-white relative overflow-hidden animate-fade-in font-sans">
       
@@ -24,40 +30,40 @@ const Intro: React.FC<IntroProps> = ({ onStart }) => {
         
         {/* Trust Badge */}
         <div className="flex items-center gap-2 mb-6 opacity-90">
-          <div className="flex -space-x-2">
-            {[1,2,3].map(i => (
-              <div key={i} className="w-8 h-8 rounded-full border-2 border-black bg-gray-200 overflow-hidden">
-                <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${i+10}`} alt="User" />
+          <div className="flex -space-x-3">
+            {userPhotos.map((url, i) => (
+              <div key={i} className="w-9 h-9 rounded-full border-2 border-white/20 bg-gray-200 overflow-hidden shadow-lg">
+                <img src={url} alt="Produtor" className="w-full h-full object-cover" />
               </div>
             ))}
           </div>
-          <div className="text-xs font-semibold">
+          <div className="text-xs font-semibold ml-2 shadow-black drop-shadow-md">
             <span className="text-[#00A86B] font-bold">+15.000</span> produtores usam
           </div>
         </div>
 
         {/* Headline */}
-        <h1 className="text-4xl md:text-5xl font-black leading-[0.95] tracking-tight mb-4">
+        <h1 className="text-4xl md:text-5xl font-black leading-[0.95] tracking-tight mb-4 drop-shadow-xl">
           Pare de perder <br/>
           <span className="text-[#00A86B]">dinheiro</span> na <br/>
           sua lavoura.
         </h1>
 
         {/* Subheadline */}
-        <p className="text-gray-300 text-lg font-medium leading-relaxed mb-8 max-w-xs">
+        <p className="text-gray-200 text-lg font-medium leading-relaxed mb-8 max-w-xs drop-shadow-md">
           Faça o diagnóstico gratuito e descubra onde está o gargalo da sua produção com a ajuda da IA.
         </p>
 
         {/* Feature Highlights (Mini) */}
         <div className="flex gap-3 mb-8">
            <div className="bg-white/10 backdrop-blur-md border border-white/20 px-3 py-2 rounded-xl">
-             <span className="block text-[10px] text-gray-400 uppercase font-bold">Tecnologia</span>
+             <span className="block text-[10px] text-gray-300 uppercase font-bold">Tecnologia</span>
              <span className="text-sm font-bold text-white flex items-center gap-1">
                <Star size={12} className="text-yellow-400 fill-yellow-400" /> Tonico AI
              </span>
            </div>
            <div className="bg-white/10 backdrop-blur-md border border-white/20 px-3 py-2 rounded-xl">
-             <span className="block text-[10px] text-gray-400 uppercase font-bold">Funciona</span>
+             <span className="block text-[10px] text-gray-300 uppercase font-bold">Funciona</span>
              <span className="text-sm font-bold text-white">100% Offline</span>
            </div>
         </div>
@@ -72,7 +78,7 @@ const Intro: React.FC<IntroProps> = ({ onStart }) => {
           <ArrowRight className="w-6 h-6 relative z-10 group-hover:translate-x-1 transition-transform" />
         </button>
         
-        <p className="text-center text-[10px] text-gray-500 mt-4 font-medium uppercase tracking-widest">
+        <p className="text-center text-[10px] text-gray-400 mt-4 font-medium uppercase tracking-widest">
           Levará menos de 1 minuto
         </p>
       </div>
