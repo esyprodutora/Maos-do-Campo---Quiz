@@ -59,7 +59,7 @@ const Results: React.FC = () => {
 
         <div className="px-6 pt-8 text-center relative z-10">
           <h1 className="text-3xl font-black text-white leading-[0.9] mb-4 tracking-tighter drop-shadow-lg">
-            Você está <br/> <span className="text-red-500">perdendo dinheiro.</span>
+            Sua lavoura está <br/> <span className="text-red-500">perdendo dinheiro.</span>
           </h1>
           
           <p className="text-gray-300 text-sm font-medium leading-relaxed mb-6 px-2">
@@ -313,7 +313,9 @@ const Results: React.FC = () => {
                        </div>
                        <p className="text-gray-600 text-sm italic mb-4">"O controle de insumos pagou o app na primeira semana. Tinha funcionário desperdiçando e eu nem via."</p>
                        <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center font-bold text-xs text-gray-500">JM</div>
+                          <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center font-bold text-xs text-gray-500 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1542596594-649edbc13630?w=100&h=100&fit=crop&q=80" className="w-full h-full object-cover" alt="User" />
+                          </div>
                           <p className="font-bold text-gray-900 text-xs">João M. <span className="block text-gray-400 font-normal">Produtor de Soja (GO)</span></p>
                        </div>
                     </div>
@@ -324,8 +326,49 @@ const Results: React.FC = () => {
                        </div>
                        <p className="text-gray-600 text-sm italic mb-4">"Achava que meu lucro era um, o app mostrou que era outro. Cortei custos na hora certa."</p>
                        <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center font-bold text-xs text-gray-500">AS</div>
+                          <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center font-bold text-xs text-gray-500 overflow-hidden">
+                             <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=100&h=100&fit=crop&q=80" className="w-full h-full object-cover" alt="User" />
+                          </div>
                           <p className="font-bold text-gray-900 text-xs">Antônio Silva <span className="block text-gray-400 font-normal">Cafeicultor (MG)</span></p>
+                       </div>
+                    </div>
+
+                    <div className="w-[280px] bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                       <div className="flex gap-1 mb-3">
+                          {[1,2,3,4,5].map(i => <Star key={i} size={14} className="fill-yellow-400 text-yellow-400" />)}
+                       </div>
+                       <p className="text-gray-600 text-sm italic mb-4">"A gestão offline me salvou. Aqui na roça a internet cai direto, mas o app nunca para."</p>
+                       <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center font-bold text-xs text-gray-500 overflow-hidden">
+                             <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?w=100&h=100&fit=crop&q=80" className="w-full h-full object-cover" alt="User" />
+                          </div>
+                          <p className="font-bold text-gray-900 text-xs">Ricardo F. <span className="block text-gray-400 font-normal">Milho (MT)</span></p>
+                       </div>
+                    </div>
+
+                    <div className="w-[280px] bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                       <div className="flex gap-1 mb-3">
+                          {[1,2,3,4,5].map(i => <Star key={i} size={14} className="fill-yellow-400 text-yellow-400" />)}
+                       </div>
+                       <p className="text-gray-600 text-sm italic mb-4">"Muito simples de usar. Em 5 minutos lanço tudo e fico tranquilo."</p>
+                       <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center font-bold text-xs text-gray-500 overflow-hidden">
+                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&q=80" className="w-full h-full object-cover" alt="User" />
+                          </div>
+                          <p className="font-bold text-gray-900 text-xs">Mariana C. <span className="block text-gray-400 font-normal">Hortifruti (SP)</span></p>
+                       </div>
+                    </div>
+
+                    <div className="w-[280px] bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                       <div className="flex gap-1 mb-3">
+                          {[1,2,3,4,5].map(i => <Star key={i} size={14} className="fill-yellow-400 text-yellow-400" />)}
+                       </div>
+                       <p className="text-gray-600 text-sm italic mb-4">"O Tonico AI me ajudou a identificar uma praga antes de alastrar. Pagou o plano vitalício."</p>
+                       <div className="flex items-center gap-3">
+                          <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center font-bold text-xs text-gray-500 overflow-hidden">
+                             <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&q=80" className="w-full h-full object-cover" alt="User" />
+                          </div>
+                          <p className="font-bold text-gray-900 text-xs">Carlos B. <span className="block text-gray-400 font-normal">Café (ES)</span></p>
                        </div>
                     </div>
                 </div>

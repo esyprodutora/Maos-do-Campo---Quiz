@@ -78,7 +78,7 @@ const Intro: React.FC<IntroProps> = ({ onStart }) => {
 
           <div className="flex flex-col text-left z-10">
             <span className="text-[10px] font-bold text-green-100 uppercase tracking-widest mb-0.5">100% Gratuito</span>
-            <span className="text-base sm:text-lg font-black leading-none tracking-tight">INICIAR DIAGNÓSTICO</span>
+            <span className="text-base sm:text-lg font-black leading-none tracking-tight">INICIAR DIAGNÓSTICO GRATUITO</span>
           </div>
           
           <div className="bg-white/20 h-11 w-11 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:bg-white group-hover:text-[#00995E] transition-colors z-10 shadow-inner">
