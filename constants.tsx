@@ -9,7 +9,7 @@ export const QUIZ_QUESTIONS: Question[] = [
     insight: "⚠️ O 'caderninho' esconde erros de cálculo que somam até 15% de prejuízo por safra.",
     options: [
       { label: "Caderninho / Papel de Pão", value: "notebook", icon: "BookOpen" },
-      { label: "De cabeça / Memória", value: "memory", icon: "XCircle" },
+      { label: "De cabeça / Memória", value: "memory", icon: "CircleX" },
       { label: "Planilha no Computador", value: "excel", icon: "FileSpreadsheet" },
       { label: "Aplicativo de Gestão", value: "app", icon: "Smartphone" },
     ],
@@ -20,10 +20,10 @@ export const QUIZ_QUESTIONS: Question[] = [
     backgroundImage: "https://images.unsplash.com/photo-1589923188900-85dae523342b?q=60&w=600&auto=format&fit=crop",
     insight: "📦 Estoque sem controle gera compras duplicadas e abre brecha para desperdícios ou furtos.",
     options: [
-      { label: "Sei de cabeça", value: "memory", icon: "HelpCircle" },
+      { label: "Sei de cabeça", value: "memory", icon: "CircleHelp" },
       { label: "Tenho anotado, mas desatualizado", value: "outdated", icon: "BookOpen" },
       { label: "Não sei, preciso ir lá contar", value: "no", icon: "Package" },
-      { label: "Controle total e atualizado", value: "yes", icon: "CheckCircle" },
+      { label: "Controle total e atualizado", value: "yes", icon: "CircleCheck" },
     ],
   },
   {
@@ -44,8 +44,8 @@ export const QUIZ_QUESTIONS: Question[] = [
     backgroundImage: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=60&w=600&auto=format&fit=crop",
     insight: "🚜 A falta de preventivas diminui a vida útil do maquinário em até 4 anos.",
     options: [
-      { label: "Não, só arrumo quando quebra", value: "break", icon: "AlertTriangle" },
-      { label: "Tento lembrar das trocas de óleo", value: "memory", icon: "HelpCircle" },
+      { label: "Não, só arrumo quando quebra", value: "break", icon: "TriangleAlert" },
+      { label: "Tento lembrar das trocas de óleo", value: "memory", icon: "CircleHelp" },
       { label: "Tenho tudo anotado e programado", value: "yes", icon: "Tractor" },
     ],
   },
@@ -57,7 +57,7 @@ export const QUIZ_QUESTIONS: Question[] = [
     options: [
       { label: "Tenho um pluviômetro na sede", value: "simple", icon: "Droplets" },
       { label: "Olho para o céu e estimo", value: "guess", icon: "Search" },
-      { label: "Não controlo", value: "no", icon: "XCircle" },
+      { label: "Não controlo", value: "no", icon: "CircleX" },
       { label: "Tenho dados exatos por talhão", value: "yes", icon: "Smartphone" },
     ],
   },
@@ -67,7 +67,7 @@ export const QUIZ_QUESTIONS: Question[] = [
     backgroundImage: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=60&w=600&auto=format&fit=crop",
     insight: "📉 Vender a saca sem saber o custo real é o caminho mais rápido para a falência.",
     options: [
-      { label: "Tenho uma estimativa", value: "guess", icon: "HelpCircle" },
+      { label: "Tenho uma estimativa", value: "guess", icon: "CircleHelp" },
       { label: "Não, só vejo o que sobrou no banco", value: "bank", icon: "DollarSign" },
       { label: "Sim, sei o custo exato", value: "yes", icon: "Coins" },
     ],
@@ -89,9 +89,9 @@ export const QUIZ_QUESTIONS: Question[] = [
     backgroundImage: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=60&w=600&auto=format&fit=crop",
     insight: "🏠 Misturar o dinheiro da família com o da lavoura é o erro financeiro #1.",
     options: [
-      { label: "É tudo a mesma conta", value: "mixed", icon: "XCircle" },
-      { label: "Tento separar, mas misturo", value: "try", icon: "HelpCircle" },
-      { label: "Totalmente separadas", value: "separated", icon: "CheckCircle" },
+      { label: "É tudo a mesma conta", value: "mixed", icon: "CircleX" },
+      { label: "Tento separar, mas misturo", value: "try", icon: "CircleHelp" },
+      { label: "Totalmente separadas", value: "separated", icon: "CircleCheck" },
     ],
   },
   {
@@ -100,7 +100,7 @@ export const QUIZ_QUESTIONS: Question[] = [
     backgroundImage: "https://images.unsplash.com/photo-1595841696677-6489ff3f8cd1?q=60&w=600&auto=format&fit=crop",
     insight: "📅 Perder o período de carência ou repetir aplicação gera custo dobrado e risco químico.",
     options: [
-      { label: "Confio na memória", value: "memory", icon: "HelpCircle" },
+      { label: "Confio na memória", value: "memory", icon: "CircleHelp" },
       { label: "Olho na embalagem vazia", value: "trash", icon: "Search" },
       { label: "Tenho tudo registrado", value: "yes", icon: "Calendar" },
     ],

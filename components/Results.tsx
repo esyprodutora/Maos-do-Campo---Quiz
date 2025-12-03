@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { 
-  AlertTriangle, Bot, MapPin, Wifi, ArrowRight, CheckCircle2, 
+  TriangleAlert, Bot, MapPin, Wifi, ArrowRight, CircleCheck, 
   ShieldCheck, Star, Users, Sprout, PieChart, 
   Gift, Zap, PlayCircle, FileText, Music, CreditCard, DollarSign,
-  Smartphone, Leaf, XCircle, MousePointer, Grid,
+  Smartphone, Leaf, CircleX, MousePointer, Grid,
   Hammer
 } from 'lucide-react';
 
@@ -53,7 +53,7 @@ const Results: React.FC = () => {
         
         {/* Top Alert Bar */}
         <div className="bg-red-600/90 backdrop-blur-sm text-white px-6 py-3 flex items-center justify-center gap-2 shadow-lg animate-pulse relative z-10">
-          <AlertTriangle size={18} className="fill-white text-red-600" />
+          <TriangleAlert size={18} className="fill-white text-red-600" />
           <span className="text-[10px] md:text-xs font-black uppercase tracking-widest">Diagnóstico: Crítico</span>
         </div>
 
@@ -117,7 +117,7 @@ const Results: React.FC = () => {
            <div className="grid gap-3">
               {/* Pain Point 1: Talhão */}
               <div className="flex gap-4 items-center bg-black/40 backdrop-blur-md p-4 rounded-xl border-l-4 border-red-500 shadow-lg">
-                 <div className="bg-red-500/20 p-2 rounded-lg"><XCircle size={20} className="text-red-500" /></div>
+                 <div className="bg-red-500/20 p-2 rounded-lg"><CircleX size={20} className="text-red-500" /></div>
                  <div>
                     <h4 className="font-bold text-white text-sm">Talhão Cego</h4>
                     <p className="text-[11px] text-gray-400 mt-0.5">Sem histórico por área, você aduba onde não precisa.</p>
@@ -356,7 +356,7 @@ const Results: React.FC = () => {
                     <div>
                         <h4 className="font-bold text-white text-sm">Masterclass: Lucro Máximo</h4>
                         <div className="flex items-center gap-2 mt-1">
-                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-2">R$ 297,00</span>
+                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-1">R$ 297,00</span>
                            <span className="text-xs font-black text-green-400 uppercase">Grátis</span>
                         </div>
                     </div>
@@ -370,7 +370,7 @@ const Results: React.FC = () => {
                     <div>
                         <h4 className="font-bold text-white text-sm">Guia: Imposto Rural</h4>
                         <div className="flex items-center gap-2 mt-1">
-                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-2">R$ 197,00</span>
+                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-1">R$ 197,00</span>
                            <span className="text-xs font-black text-green-400 uppercase">Grátis</span>
                         </div>
                     </div>
@@ -384,7 +384,7 @@ const Results: React.FC = () => {
                     <div>
                         <h4 className="font-bold text-white text-sm">Implantação VIP</h4>
                         <div className="flex items-center gap-2 mt-1">
-                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-2">R$ 406,00</span>
+                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-1">R$ 406,00</span>
                            <span className="text-xs font-black text-green-400 uppercase">Grátis</span>
                         </div>
                     </div>
@@ -484,7 +484,7 @@ const Results: React.FC = () => {
                     {/* Compact Feature List */}
                     <div className="bg-white/5 rounded-lg p-3 mb-4 space-y-2">
                         <div className="flex items-center gap-2 text-xs text-gray-200">
-                           <CheckCircle2 size={14} className="text-[#00A86B]" /> <span>Acesso Ilimitado + Tonico AI</span>
+                           <CircleCheck size={14} className="text-[#00A86B]" /> <span>Acesso Ilimitado + Tonico AI</span>
                         </div>
                         <div className="flex items-center gap-2 text-xs font-bold text-yellow-400">
                            <Gift size={14} /> <span>Inclui os 3 Bônus (R$ 900)</span>

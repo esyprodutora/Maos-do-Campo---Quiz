@@ -1,8 +1,8 @@
 import React from 'react';
 import { Question, Option } from '../types';
 import { 
-  BookOpen, XCircle, FileSpreadsheet, Smartphone, 
-  CheckCircle, HelpCircle, Search, Coins, AlertTriangle, 
+  BookOpen, CircleX, FileSpreadsheet, Smartphone, 
+  CircleCheck, CircleHelp, Search, Coins, TriangleAlert, 
   Sprout, Tractor, Users, Droplets, Package, 
   TrendingUp, Calendar, DollarSign, Leaf,
   CreditCard
@@ -16,8 +16,8 @@ interface QuizQuestionProps {
 
 // Explicit mapping with SAFE standard icons to prevent build errors
 const ICON_MAP: Record<string, React.ElementType> = {
-  BookOpen, XCircle, FileSpreadsheet, Smartphone,
-  CheckCircle, HelpCircle, Search, Coins, AlertTriangle,
+  BookOpen, CircleX, FileSpreadsheet, Smartphone,
+  CircleCheck, CircleHelp, Search, Coins, TriangleAlert,
   Sprout, Tractor, Users, Droplets, Package,
   TrendingUp, Calendar, DollarSign, Leaf,
   CreditCard
