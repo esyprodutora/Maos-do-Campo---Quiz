@@ -1,16 +1,5 @@
 import { Question } from './types';
-import { 
-  NotebookPen, 
-  FileSpreadsheet, 
-  XCircle, 
-  Smartphone, 
-  CheckCircle2, 
-  HelpCircle, 
-  Search, 
-  Sprout, 
-  Coins, 
-  AlertTriangle 
-} from 'lucide-react';
+// Removed unused imports to prevent build warnings/errors
 
 // Optimized images (w=600, q=60) for faster mobile loading
 export const QUIZ_QUESTIONS: Question[] = [

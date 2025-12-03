@@ -12,7 +12,8 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({ data, onAnswer, progress })
   const IconComponent = (name: string) => {
     // @ts-ignore
     const Icon = Icons[name];
-    return Icon ? <Icon size={24} strokeWidth={2} /> : null;
+    // Fallback if icon is not found
+    return Icon ? <Icon size={24} strokeWidth={2} /> : <div className="w-6 h-6 rounded-full bg-gray-200" />;
   };
 
   return (
