@@ -30,7 +30,7 @@ export const QUIZ_QUESTIONS: Question[] = [
   {
     id: 3,
     question: "Como você registra o dia de trabalho dos funcionários ou diaristas?",
-    backgroundImage: "https://images.unsplash.com/photo-1592982537447-6f2a6a0c30b3?q=60&w=600&auto=format&fit=crop",
+    backgroundImage: "https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?q=60&w=600&auto=format&fit=crop",
     insight: "👥 Falhas no apontamento de horas e diárias são a causa nº 1 de processos trabalhistas no campo.",
     options: [
       { label: "Anoto num caderno no fim do dia", value: "notebook", icon: "NotebookPen" },
@@ -98,7 +98,7 @@ export const QUIZ_QUESTIONS: Question[] = [
   {
     id: 9,
     question: "Você lembra quando foi a última aplicação de defensivo em cada talhão?",
-    backgroundImage: "https://images.unsplash.com/photo-1530260626688-d482330037a0?q=60&w=600&auto=format&fit=crop",
+    backgroundImage: "https://images.unsplash.com/photo-1595841696677-6489ff3f8cd1?q=60&w=600&auto=format&fit=crop",
     insight: "📅 Perder o período de carência ou repetir aplicação gera custo dobrado e risco químico.",
     options: [
       { label: "Confio na memória", value: "memory", icon: "HelpCircle" },
@@ -116,7 +116,6 @@ export const QUIZ_QUESTIONS: Question[] = [
       { label: "Soja", value: "soy", icon: "Sprout" },
       { label: "Milho", value: "corn", icon: "Wheat" },
       { label: "Hortifruti", value: "veg", icon: "Carrot" },
-      { label: "Gado / Leite", value: "cattle", icon: "Users" }, // Using Users as generic group for herd
       { label: "Outra", value: "other", icon: "Leaf" },
     ],
   },

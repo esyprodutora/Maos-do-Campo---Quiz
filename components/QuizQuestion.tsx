@@ -5,7 +5,7 @@ import {
   CheckCircle2, HelpCircle, Search, Coins, AlertTriangle, 
   Sprout, Tractor, Users, Droplets, PackageSearch, 
   TrendingUp, CalendarClock, DollarSign, Leaf,
-  Wheat, Coffee, Carrot, Gavel
+  Wheat, Coffee, Carrot, Gavel, Wallet
 } from 'lucide-react';
 
 interface QuizQuestionProps {
@@ -20,7 +20,7 @@ const ICON_MAP: Record<string, React.ElementType> = {
   CheckCircle2, HelpCircle, Search, Coins, AlertTriangle,
   Sprout, Tractor, Users, Droplets, PackageSearch,
   TrendingUp, CalendarClock, DollarSign, Leaf,
-  Wheat, Coffee, Carrot, Gavel
+  Wheat, Coffee, Carrot, Gavel, Wallet
 };
 
 const QuizQuestion: React.FC<QuizQuestionProps> = ({ data, onAnswer, progress }) => {
