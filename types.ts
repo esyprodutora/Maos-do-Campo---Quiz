@@ -8,6 +8,8 @@ export interface Question {
   id: number;
   question: string;
   options: Option[];
+  backgroundImage: string;
+  insight?: string; // Persuasive fact/stat displayed with the question
 }
 
 export type AppStep = 'intro' | 'quiz' | 'processing' | 'results';
