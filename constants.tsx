@@ -111,10 +111,10 @@ export const QUIZ_QUESTIONS: Question[] = [
     backgroundImage: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=60&w=600&auto=format&fit=crop",
     insight: "🌱 O aplicativo se adapta aos ciclos específicos da sua plantação.",
     options: [
-      { label: "Café", value: "coffee", icon: "Coffee" },
+      { label: "Café", value: "coffee", icon: "Leaf" },
       { label: "Soja", value: "soy", icon: "Sprout" },
-      { label: "Milho", value: "corn", icon: "Wheat" },
-      { label: "Hortifruti", value: "veg", icon: "Carrot" },
+      { label: "Milho", value: "corn", icon: "Sprout" },
+      { label: "Hortifruti", value: "veg", icon: "Leaf" },
       { label: "Outra", value: "other", icon: "Leaf" },
     ],
   },

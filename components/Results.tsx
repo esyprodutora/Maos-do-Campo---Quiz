@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { 
-  AlertTriangle, Bot, MapPin, WifiOff, ArrowRight, CheckCircle2, 
+  AlertTriangle, Bot, MapPin, Wifi, ArrowRight, CheckCircle2, 
   ShieldCheck, Star, Users, Sprout, PieChart, 
-  Gift, Zap, PlayCircle, FileText, Headphones, CreditCard, Banknote,
-  Smartphone, Leaf, XCircle, MousePointerClick, LayoutTemplate,
-  Construction
+  Gift, Zap, PlayCircle, FileText, Music, CreditCard, DollarSign,
+  Smartphone, Leaf, XCircle, MousePointer, Grid,
+  Hammer
 } from 'lucide-react';
 
 // Defined before usage to prevent ReferenceError
@@ -126,7 +126,7 @@ const Results: React.FC = () => {
 
               {/* Pain Point 2: Gastos & Financeiro */}
               <div className="flex gap-4 items-center bg-black/40 backdrop-blur-md p-4 rounded-xl border-l-4 border-red-500 shadow-lg">
-                 <div className="bg-red-500/20 p-2 rounded-lg"><Construction size={20} className="text-red-500" /></div>
+                 <div className="bg-red-500/20 p-2 rounded-lg"><Hammer size={20} className="text-red-500" /></div>
                  <div>
                     <h4 className="font-bold text-white text-sm">Caixa Misturado</h4>
                     <p className="text-[11px] text-gray-400 mt-0.5">Dinheiro de casa e da safra juntos mascaram o prejuízo real.</p>
@@ -189,7 +189,7 @@ const Results: React.FC = () => {
       ===================================================================================== */}
       <div className="bg-blue-50/50 px-6 py-10 text-center border-y border-blue-100">
          <div className="inline-block p-3 bg-white rounded-full mb-4 shadow-sm">
-            <MousePointerClick size={28} className="text-blue-600" />
+            <MousePointer size={28} className="text-blue-600" />
          </div>
          <h3 className="text-xl font-black text-gray-900 mb-3">
            "Eu mal sei mexer no celular..."
@@ -200,11 +200,11 @@ const Results: React.FC = () => {
 
          <div className="flex justify-center gap-2 flex-wrap">
             <div className="bg-white px-3 py-2 rounded-lg border border-blue-100 flex items-center gap-2 shadow-sm">
-               <LayoutTemplate size={14} className="text-blue-400" />
+               <Grid size={14} className="text-blue-400" />
                <span className="text-xs font-bold text-gray-600">Botões Grandes</span>
             </div>
             <div className="bg-white px-3 py-2 rounded-lg border border-blue-100 flex items-center gap-2 shadow-sm">
-               <MousePointerClick size={14} className="text-blue-400" />
+               <MousePointer size={14} className="text-blue-400" />
                <span className="text-xs font-bold text-gray-600">1 Clique</span>
             </div>
          </div>
@@ -289,7 +289,7 @@ const Results: React.FC = () => {
                    <MapPin size={10} /> GPS de Precisão
                 </span>
                 <span className="text-[10px] font-bold bg-[#00A86B]/20 text-[#00A86B] border border-[#00A86B]/50 px-3 py-1.5 rounded-full flex items-center gap-1">
-                   <WifiOff size={10} /> Funciona Offline
+                   <Wifi size={10} /> Funciona Offline
                 </span>
              </div>
            </div>
@@ -379,7 +379,7 @@ const Results: React.FC = () => {
                   {/* Bonus 3 */}
                   <div className="flex gap-4 items-center bg-white/5 border border-white/10 p-4 rounded-xl">
                     <div className="h-10 w-10 bg-yellow-500 rounded-lg flex items-center justify-center shrink-0 shadow-lg text-black">
-                        <Headphones size={20} />
+                        <Music size={20} />
                     </div>
                     <div>
                         <h4 className="font-bold text-white text-sm">Implantação VIP</h4>
@@ -510,7 +510,7 @@ const Results: React.FC = () => {
                 <span className="h-3 w-px bg-gray-300"></span>
                 <img src="https://logopng.com.br/logos/pix-106.png" className="h-4 grayscale opacity-80" alt="Pix" />
                 <span className="h-3 w-px bg-gray-300"></span>
-                <Banknote size={20} className="text-gray-400" />
+                <DollarSign size={20} className="text-gray-400" />
              </div>
            </div>
         </div>

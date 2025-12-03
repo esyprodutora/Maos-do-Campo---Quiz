@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Bot, CheckCircle2, Satellite, Wifi, Lock } from 'lucide-react';
+import { Bot, CheckCircle2, Wifi, Lock } from 'lucide-react';
 
 interface ProcessingProps {
   onComplete: () => void;
@@ -16,7 +16,7 @@ const Processing: React.FC<ProcessingProps> = ({ onComplete }) => {
   }, [onComplete]);
 
   const steps = [
-    { text: "Conectando ao satélite...", sub: "Buscando dados da região", icon: <Satellite size={48} />, color: "text-blue-500", bg: "bg-blue-50" },
+    { text: "Conectando ao satélite...", sub: "Buscando dados da região", icon: <Wifi size={48} />, color: "text-blue-500", bg: "bg-blue-50" },
     { text: "Consultando Tonico AI...", sub: "Analisando padrões de perda", icon: <Bot size={56} className="animate-bounce" />, color: "text-[#00A86B]", bg: "bg-green-50" },
     { text: "Verificando modo offline...", sub: "Sincronizando banco de dados", icon: <Wifi size={48} />, color: "text-purple-500", bg: "bg-purple-50" },
     { text: "Finalizando relatório...", sub: "Quase pronto", icon: <CheckCircle2 size={48} />, color: "text-gray-800", bg: "bg-gray-100" }
