@@ -7,9 +7,9 @@ interface IntroProps {
 
 const Intro: React.FC<IntroProps> = ({ onStart }) => {
   const userPhotos = [
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&q=80", // Man
-    "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&q=80", // Woman
-    "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=100&h=100&fit=crop&q=80"  // Man (Rural look)
+    "https://images.unsplash.com/photo-1566415510-40d999335e26?w=100&h=100&fit=crop&q=80", // Older Man
+    "https://images.unsplash.com/photo-1543487372-6ae98e27c093?w=100&h=100&fit=crop&q=80", // Experienced Farmer
+    "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=100&h=100&fit=crop&q=80"  // Rural Worker
   ];
 
   return (

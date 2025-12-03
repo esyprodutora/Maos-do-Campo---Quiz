@@ -307,66 +307,71 @@ const Results: React.FC = () => {
            <div className="flex w-[200%] animate-scroll">
               {[1, 2, 3, 4].map((set) => (
                 <div key={set} className="flex gap-4 pr-4">
+                    {/* Testimonial 1 - Older Male */}
                     <div className="w-[280px] bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                        <div className="flex gap-1 mb-3">
                           {[1,2,3,4,5].map(i => <Star key={i} size={14} className="fill-yellow-400 text-yellow-400" />)}
                        </div>
                        <p className="text-gray-600 text-sm italic mb-4">"O controle de insumos pagou o app na primeira semana. Tinha funcionário desperdiçando e eu nem via."</p>
                        <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center font-bold text-xs text-gray-500 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1542596594-649edbc13630?w=100&h=100&fit=crop&q=80" className="w-full h-full object-cover" alt="User" />
+                          <div className="w-10 h-10 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center font-bold text-xs text-gray-500 shadow-sm">
+                            JM
                           </div>
                           <p className="font-bold text-gray-900 text-xs">João M. <span className="block text-gray-400 font-normal">Produtor de Soja (GO)</span></p>
                        </div>
                     </div>
                     
+                    {/* Testimonial 2 - Rugged Male */}
                     <div className="w-[280px] bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                        <div className="flex gap-1 mb-3">
                           {[1,2,3,4,5].map(i => <Star key={i} size={14} className="fill-yellow-400 text-yellow-400" />)}
                        </div>
                        <p className="text-gray-600 text-sm italic mb-4">"Achava que meu lucro era um, o app mostrou que era outro. Cortei custos na hora certa."</p>
                        <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center font-bold text-xs text-gray-500 overflow-hidden">
-                             <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=100&h=100&fit=crop&q=80" className="w-full h-full object-cover" alt="User" />
+                          <div className="w-10 h-10 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center font-bold text-xs text-gray-500 shadow-sm">
+                             AS
                           </div>
                           <p className="font-bold text-gray-900 text-xs">Antônio Silva <span className="block text-gray-400 font-normal">Cafeicultor (MG)</span></p>
                        </div>
                     </div>
 
+                    {/* Testimonial 3 - Older Male/Hat */}
                     <div className="w-[280px] bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                        <div className="flex gap-1 mb-3">
                           {[1,2,3,4,5].map(i => <Star key={i} size={14} className="fill-yellow-400 text-yellow-400" />)}
                        </div>
                        <p className="text-gray-600 text-sm italic mb-4">"A gestão offline me salvou. Aqui na roça a internet cai direto, mas o app nunca para."</p>
                        <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center font-bold text-xs text-gray-500 overflow-hidden">
-                             <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?w=100&h=100&fit=crop&q=80" className="w-full h-full object-cover" alt="User" />
+                          <div className="w-10 h-10 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center font-bold text-xs text-gray-500 shadow-sm">
+                             RF
                           </div>
                           <p className="font-bold text-gray-900 text-xs">Ricardo F. <span className="block text-gray-400 font-normal">Milho (MT)</span></p>
                        </div>
                     </div>
 
+                    {/* Testimonial 4 - Older Woman */}
                     <div className="w-[280px] bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                        <div className="flex gap-1 mb-3">
                           {[1,2,3,4,5].map(i => <Star key={i} size={14} className="fill-yellow-400 text-yellow-400" />)}
                        </div>
                        <p className="text-gray-600 text-sm italic mb-4">"Muito simples de usar. Em 5 minutos lanço tudo e fico tranquilo."</p>
                        <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center font-bold text-xs text-gray-500 overflow-hidden">
-                             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&q=80" className="w-full h-full object-cover" alt="User" />
+                          <div className="w-10 h-10 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center font-bold text-xs text-gray-500 shadow-sm">
+                             DM
                           </div>
-                          <p className="font-bold text-gray-900 text-xs">Mariana C. <span className="block text-gray-400 font-normal">Hortifruti (SP)</span></p>
+                          <p className="font-bold text-gray-900 text-xs">Dona Maria <span className="block text-gray-400 font-normal">Hortifruti (SP)</span></p>
                        </div>
                     </div>
 
+                    {/* Testimonial 5 - Older Male */}
                     <div className="w-[280px] bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
                        <div className="flex gap-1 mb-3">
                           {[1,2,3,4,5].map(i => <Star key={i} size={14} className="fill-yellow-400 text-yellow-400" />)}
                        </div>
                        <p className="text-gray-600 text-sm italic mb-4">"O Tonico AI me ajudou a identificar uma praga antes de alastrar. Pagou o plano vitalício."</p>
                        <div className="flex items-center gap-3">
-                          <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center font-bold text-xs text-gray-500 overflow-hidden">
-                             <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&q=80" className="w-full h-full object-cover" alt="User" />
+                          <div className="w-10 h-10 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center font-bold text-xs text-gray-500 shadow-sm">
+                             CB
                           </div>
                           <p className="font-bold text-gray-900 text-xs">Carlos B. <span className="block text-gray-400 font-normal">Café (ES)</span></p>
                        </div>
@@ -399,7 +404,7 @@ const Results: React.FC = () => {
                     <div>
                         <h4 className="font-bold text-white text-sm">Masterclass: Lucro Máximo</h4>
                         <div className="flex items-center gap-2 mt-1">
-                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-[0.5px]">R$ 297,00</span>
+                           <span className="text-xs text-gray-400 line-through decoration-red-500 decoration-1 opacity-70">R$ 297,00</span>
                            <span className="text-xs font-black text-green-400 uppercase">Grátis</span>
                         </div>
                     </div>
@@ -413,7 +418,7 @@ const Results: React.FC = () => {
                     <div>
                         <h4 className="font-bold text-white text-sm">Guia: Imposto Rural</h4>
                         <div className="flex items-center gap-2 mt-1">
-                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-[0.5px]">R$ 197,00</span>
+                           <span className="text-xs text-gray-400 line-through decoration-red-500 decoration-1 opacity-70">R$ 197,00</span>
                            <span className="text-xs font-black text-green-400 uppercase">Grátis</span>
                         </div>
                     </div>
@@ -427,7 +432,7 @@ const Results: React.FC = () => {
                     <div>
                         <h4 className="font-bold text-white text-sm">Implantação VIP</h4>
                         <div className="flex items-center gap-2 mt-1">
-                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-[0.5px]">R$ 406,00</span>
+                           <span className="text-xs text-gray-400 line-through decoration-red-500 decoration-1 opacity-70">R$ 403,00</span>
                            <span className="text-xs font-black text-green-400 uppercase">Grátis</span>
                         </div>
                     </div>
@@ -437,7 +442,8 @@ const Results: React.FC = () => {
               <div className="mt-8 pt-6 border-t border-white/10 flex justify-between items-end">
                  <div>
                     <p className="text-gray-400 text-[10px] uppercase tracking-widest font-bold">Valor Total</p>
-                    <p className="text-2xl font-black text-white line-through decoration-red-500 decoration-[0.5px] opacity-50">R$ 900</p>
+                    {/* Updated Total Value and readability */}
+                    <p className="text-2xl font-black text-white/50 line-through decoration-red-500 decoration-1">R$ 897</p>
                  </div>
                  <div className="text-right">
                     <p className="text-gray-400 text-[10px] uppercase tracking-widest font-bold">Você Paga</p>
@@ -530,7 +536,7 @@ const Results: React.FC = () => {
                            <CircleCheck size={14} className="text-[#00A86B]" /> <span>Acesso Ilimitado + Tonico AI</span>
                         </div>
                         <div className="flex items-center gap-2 text-xs font-bold text-yellow-400">
-                           <Gift size={14} /> <span>Inclui os 3 Bônus (R$ 900)</span>
+                           <Gift size={14} /> <span>Inclui os 3 Bônus (R$ 897)</span>
                         </div>
                     </div>
                  </div>
