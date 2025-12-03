@@ -394,7 +394,7 @@ const Results: React.FC = () => {
               <div className="mt-8 pt-6 border-t border-white/10 flex justify-between items-end">
                  <div>
                     <p className="text-gray-400 text-[10px] uppercase tracking-widest font-bold">Valor Total</p>
-                    <p className="text-2xl font-black text-white line-through decoration-red-500 decoration-4 opacity-50">R$ 900</p>
+                    <p className="text-2xl font-black text-white line-through decoration-red-500 decoration-1 opacity-50">R$ 900</p>
                  </div>
                  <div className="text-right">
                     <p className="text-gray-400 text-[10px] uppercase tracking-widest font-bold">Você Paga</p>
