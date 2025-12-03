@@ -74,7 +74,7 @@ const Intro: React.FC<IntroProps> = ({ onStart }) => {
           className="group relative w-full bg-[#00A86B] hover:bg-[#008f5b] text-white text-lg font-bold py-5 rounded-2xl shadow-[0_0_40px_rgba(0,168,107,0.4)] transition-all transform hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-3 overflow-hidden"
         >
           <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-          <span className="relative z-10">COMEÇAR DIAGNÓSTICO</span>
+          <span className="relative z-10">INICIAR DIAGNÓSTICO GRATUITO</span>
           <ArrowRight className="w-6 h-6 relative z-10 group-hover:translate-x-1 transition-transform" />
         </button>
         
