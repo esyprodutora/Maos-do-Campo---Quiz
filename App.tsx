@@ -50,7 +50,7 @@ const App: React.FC = () => {
       <div className="w-full h-[100dvh] md:h-[850px] md:max-w-[430px] bg-white md:rounded-[45px] shadow-2xl overflow-hidden relative flex flex-col border-gray-200 md:border-[8px] transition-all">
         
         {/* Dynamic Content */}
-        <div className="flex-1 h-full overflow-hidden relative">
+        <div className="flex-1 h-full relative overflow-y-auto custom-scrollbar bg-white">
           {state.currentStep === 'intro' && (
             <Intro onStart={handleStart} />
           )}
