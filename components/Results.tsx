@@ -59,7 +59,7 @@ const Results: React.FC = () => {
 
         <div className="px-6 pt-8 text-center relative z-10">
           <h1 className="text-3xl font-black text-white leading-[0.9] mb-4 tracking-tighter drop-shadow-lg">
-            Sua margem <br/> <span className="text-red-500">está sangrando.</span>
+            Você está <br/> <span className="text-red-500">perdendo dinheiro.</span>
           </h1>
           
           <p className="text-gray-300 text-sm font-medium leading-relaxed mb-6 px-2">
