@@ -1,17 +1,11 @@
 import React from 'react';
-import { ArrowRight, Star } from 'lucide-react';
+import { ArrowRight, Star, Users } from 'lucide-react';
 
 interface IntroProps {
   onStart: () => void;
 }
 
 const Intro: React.FC<IntroProps> = ({ onStart }) => {
-  const userPhotos = [
-    "https://images.unsplash.com/photo-1566415510-40d999335e26?w=100&h=100&fit=crop&q=80", // Older Man
-    "https://images.unsplash.com/photo-1543487372-6ae98e27c093?w=100&h=100&fit=crop&q=80", // Experienced Farmer
-    "https://images.unsplash.com/photo-1595152772835-219674b2a8a6?w=100&h=100&fit=crop&q=80"  // Rural Worker
-  ];
-
   return (
     <div className="flex flex-col h-full bg-white relative overflow-hidden animate-fade-in font-sans">
       
@@ -28,17 +22,15 @@ const Intro: React.FC<IntroProps> = ({ onStart }) => {
       {/* Content */}
       <div className="relative z-10 flex-1 flex flex-col justify-end px-6 pb-8 text-white">
         
-        {/* Trust Badge */}
-        <div className="flex items-center gap-2 mb-6 opacity-90">
-          <div className="flex -space-x-3">
-            {userPhotos.map((url, i) => (
-              <div key={i} className="w-9 h-9 rounded-full border-2 border-white/20 bg-gray-200 overflow-hidden shadow-lg">
-                <img src={url} alt="Produtor" className="w-full h-full object-cover" />
-              </div>
-            ))}
-          </div>
-          <div className="text-xs font-semibold ml-2 shadow-black drop-shadow-md">
-            <span className="text-[#00A86B] font-bold">+15.000</span> produtores usam
+        {/* Trust Badge (No Photos, High Contrast) */}
+        <div className="flex items-center gap-2 mb-6">
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 flex items-center gap-2 shadow-lg">
+            <div className="bg-[#00A86B] p-1 rounded-full">
+               <Users size={14} className="text-white" />
+            </div>
+            <div className="text-sm font-bold text-white shadow-black drop-shadow-sm">
+              Mais de <span className="text-[#00A86B] font-black">15.000</span> produtores usam
+            </div>
           </div>
         </div>
 
