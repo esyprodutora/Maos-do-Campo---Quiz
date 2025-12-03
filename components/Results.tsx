@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { 
   AlertTriangle, Bot, MapPin, WifiOff, ArrowRight, CheckCircle2, 
-  ShieldCheck, Star, Users, Sprout, ShoppingCart, PieChart, 
+  ShieldCheck, Star, Users, Sprout, PieChart, 
   Gift, Zap, PlayCircle, FileText, Headphones, CreditCard, Banknote,
-  Smartphone, Leaf, XCircle, MousePointerClick, LayoutTemplate
+  Smartphone, Leaf, XCircle, MousePointerClick, LayoutTemplate,
+  Construction
 } from 'lucide-react';
 
 // Defined before usage to prevent ReferenceError
@@ -33,6 +34,9 @@ const Results: React.FC = () => {
     .animate-scroll {
       animation: scroll 20s linear infinite;
     }
+    .neon-text {
+      text-shadow: 0 0 10px rgba(0, 168, 107, 0.5);
+    }
   `;
 
   return (
@@ -40,51 +44,62 @@ const Results: React.FC = () => {
       <style>{scrollStyle}</style>
 
       {/* =====================================================================================
-          1. HEADLINE AGRESSIVA & DIAGNÓSTICO
+          1. DIAGNÓSTICO DE CRISE (PREMIUM DARK ALERT)
       ===================================================================================== */}
-      <div className="relative bg-white pb-8 rounded-b-[40px] shadow-xl z-30 overflow-hidden">
-        <div className="bg-red-600 text-white px-6 py-3 flex items-center justify-center gap-2 shadow-lg animate-pulse">
+      <div className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-red-950 pb-10 rounded-b-[40px] shadow-2xl z-30 overflow-hidden text-white">
+        
+        {/* Background Grid */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:20px_20px]"></div>
+        
+        {/* Top Alert Bar */}
+        <div className="bg-red-600/90 backdrop-blur-sm text-white px-6 py-3 flex items-center justify-center gap-2 shadow-lg animate-pulse relative z-10">
           <AlertTriangle size={18} className="fill-white text-red-600" />
-          <span className="text-[10px] md:text-xs font-black uppercase tracking-widest">Alerta: Risco Financeiro Alto</span>
+          <span className="text-[10px] md:text-xs font-black uppercase tracking-widest">Diagnóstico: Crítico</span>
         </div>
 
-        <div className="px-6 pt-8 text-center">
-          <h1 className="text-3xl font-black text-gray-900 leading-[0.9] mb-4 tracking-tighter">
-            Sua margem de lucro <br/> <span className="text-red-600">está sangrando.</span>
+        <div className="px-6 pt-8 text-center relative z-10">
+          <h1 className="text-3xl font-black text-white leading-[0.9] mb-4 tracking-tighter drop-shadow-lg">
+            Sua margem <br/> <span className="text-red-500">está sangrando.</span>
           </h1>
           
-          <p className="text-gray-600 text-sm font-medium leading-relaxed mb-6 px-2">
-            O diagnóstico apontou que a falta de gestão profissional está consumindo silenciosamente o resultado da sua colheita.
+          <p className="text-gray-300 text-sm font-medium leading-relaxed mb-6 px-2">
+            A falta de ferramentas profissionais está drenando o lucro da sua colheita silenciosamente.
           </p>
 
-          {/* GRÁFICO DE IMPACTO */}
-          <div className="bg-gray-50 border border-gray-200 rounded-3xl p-6 shadow-lg mb-8">
-             <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-6">Projeção da Próxima Safra</h3>
+          {/* GRÁFICO DE IMPACTO (DASHBOARD STYLE) */}
+          <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-3xl p-6 shadow-2xl mb-8 ring-1 ring-white/5">
+             <div className="flex justify-between items-center mb-6 border-b border-white/10 pb-2">
+                 <h3 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider">Previsão Financeira</h3>
+                 <div className="flex gap-1">
+                    <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                    <span className="text-[10px] font-bold text-red-400">Risco Alto</span>
+                 </div>
+             </div>
              
              <div className="flex items-end justify-center gap-4 h-48 w-full max-w-xs mx-auto">
                 {/* BARRA 1: ATUAL */}
                 <div className="w-1/2 flex flex-col justify-end h-full group">
                    <div className="mb-2 text-center">
-                      <span className="block text-xs text-gray-400 font-medium">Sem Gestão</span>
-                      <span className="block text-lg font-black text-red-500 leading-none">- R$ 18k</span>
-                      <span className="text-[10px] text-red-400 font-bold">(Estimado)</span>
+                      <span className="block text-[10px] text-gray-400 font-bold uppercase mb-1">Hoje</span>
+                      <span className="block text-xl font-black text-red-400 leading-none tracking-tighter">-R$ 18k</span>
+                      <span className="text-[9px] text-red-400/70 font-bold">Desperdício</span>
                    </div>
-                   <div className="w-full bg-red-100 rounded-t-xl h-[50%] relative border-t-4 border-red-500 flex items-center justify-center">
-                      <div className="absolute top-2 w-full border-t border-red-200 border-dashed"></div>
-                      <TrendingDownIcon className="text-red-400 opacity-50" />
+                   <div className="w-full bg-gradient-to-b from-red-500/80 to-red-900/20 rounded-t-lg h-[50%] relative border-t-2 border-red-500 flex items-center justify-center">
+                      <div className="absolute top-0 w-full h-full bg-[linear-gradient(45deg,transparent_25%,rgba(0,0,0,0.2)_50%,transparent_75%,transparent_100%)] bg-[size:10px_10px]"></div>
+                      <TrendingDownIcon className="text-white opacity-50 drop-shadow-md" />
                    </div>
                 </div>
 
                 {/* BARRA 2: COM APP */}
                 <div className="w-1/2 flex flex-col justify-end h-full">
                    <div className="mb-2 text-center">
-                       <span className="block text-xs text-gray-400 font-medium">Gestão Pro</span>
-                       <span className="block text-lg font-black text-[#00A86B] leading-none">+ 22%</span>
+                       <span className="block text-[10px] text-[#00A86B] font-bold uppercase mb-1">Com App</span>
+                       <span className="block text-xl font-black text-[#00A86B] leading-none tracking-tighter">+22%</span>
+                       <span className="text-[9px] text-[#00A86B]/70 font-bold">Margem</span>
                    </div>
-                   <div className="w-full bg-[#00A86B] rounded-t-xl h-[95%] relative shadow-[0_0_20px_rgba(0,168,107,0.3)] flex flex-col justify-end p-2">
-                      <div className="text-center text-white/90 text-xs font-bold mb-2">+ Controle</div>
-                      <div className="text-center text-white/90 text-xs font-bold mb-2">+ Insumos</div>
-                      <div className="w-full bg-white/20 h-1 rounded-full mb-2"></div>
+                   <div className="w-full bg-gradient-to-b from-[#00A86B] to-[#00A86B]/20 rounded-t-lg h-[95%] relative shadow-[0_0_30px_rgba(0,168,107,0.4)] flex flex-col justify-end p-2 border-t-2 border-[#00ff9d]">
+                      <div className="text-center text-white text-[10px] font-bold mb-1 bg-black/20 rounded py-0.5">Controle</div>
+                      <div className="text-center text-white text-[10px] font-bold mb-2 bg-black/20 rounded py-0.5">Insumos</div>
                    </div>
                 </div>
              </div>
@@ -92,144 +107,138 @@ const Results: React.FC = () => {
         </div>
 
         {/* =====================================================================================
-            NOVA SEÇÃO 1: A CAUSA DO PROBLEMA (AMADORISMO)
+            NOVA SEÇÃO 1: OS ERROS (ESTILO LOG DE ERRO)
         ===================================================================================== */}
-        <div className="px-6 pb-8">
-           <h3 className="text-lg font-black text-gray-900 leading-tight mb-4 text-center">
-             O que está drenando <br/> seu dinheiro hoje?
+        <div className="px-6 pb-2 relative z-10">
+           <h3 className="text-sm font-bold text-gray-400 uppercase tracking-widest mb-4 text-center">
+             Detectamos 3 Pontos de Falha
            </h3>
            
            <div className="grid gap-3">
               {/* Pain Point 1: Talhão */}
-              <div className="flex gap-3 items-start bg-red-50 p-4 rounded-xl border border-red-100">
-                 <div className="mt-1"><XCircle size={18} className="text-red-500" /></div>
+              <div className="flex gap-4 items-center bg-black/40 backdrop-blur-md p-4 rounded-xl border-l-4 border-red-500 shadow-lg">
+                 <div className="bg-red-500/20 p-2 rounded-lg"><XCircle size={20} className="text-red-500" /></div>
                  <div>
-                    <h4 className="font-bold text-red-900 text-sm">Talhão "Cego"</h4>
-                    <p className="text-xs text-red-700/80 mt-1">Sem saber quanto cada pedaço de terra gasta, você joga adubo onde não precisa e perde onde falta.</p>
+                    <h4 className="font-bold text-white text-sm">Talhão Cego</h4>
+                    <p className="text-[11px] text-gray-400 mt-0.5">Sem histórico por área, você aduba onde não precisa.</p>
                  </div>
               </div>
 
               {/* Pain Point 2: Gastos & Financeiro */}
-              <div className="flex gap-3 items-start bg-red-50 p-4 rounded-xl border border-red-100">
-                 <div className="mt-1"><XCircle size={18} className="text-red-500" /></div>
+              <div className="flex gap-4 items-center bg-black/40 backdrop-blur-md p-4 rounded-xl border-l-4 border-red-500 shadow-lg">
+                 <div className="bg-red-500/20 p-2 rounded-lg"><Construction size={20} className="text-red-500" /></div>
                  <div>
-                    <h4 className="font-bold text-red-900 text-sm">Financeiro Misturado</h4>
-                    <p className="text-xs text-red-700/80 mt-1">Conta de casa misturada com a da fazenda. Você nunca sabe se teve lucro real ou se está "comendo o capital".</p>
+                    <h4 className="font-bold text-white text-sm">Caixa Misturado</h4>
+                    <p className="text-[11px] text-gray-400 mt-0.5">Dinheiro de casa e da safra juntos mascaram o prejuízo real.</p>
                  </div>
               </div>
 
               {/* Pain Point 3: Pagamentos */}
-              <div className="flex gap-3 items-start bg-red-50 p-4 rounded-xl border border-red-100">
-                 <div className="mt-1"><XCircle size={18} className="text-red-500" /></div>
+              <div className="flex gap-4 items-center bg-black/40 backdrop-blur-md p-4 rounded-xl border-l-4 border-red-500 shadow-lg">
+                 <div className="bg-red-500/20 p-2 rounded-lg"><FileText size={20} className="text-red-500" /></div>
                  <div>
-                    <h4 className="font-bold text-red-900 text-sm">Descontrole de Pagamentos</h4>
-                    <p className="text-xs text-red-700/80 mt-1">Perder datas de boletos e esquecer quem te deve gera multas e furos no caixa que você nem vê.</p>
+                    <h4 className="font-bold text-white text-sm">Caderninho Falho</h4>
+                    <p className="text-[11px] text-gray-400 mt-0.5">Anotações manuais geram esquecimentos e multas.</p>
                  </div>
               </div>
            </div>
         </div>
+      </div>
 
-        {/* =====================================================================================
-            NOVA SEÇÃO 2: COMPARATIVO (O ABISMO)
-        ===================================================================================== */}
-        <div className="bg-gray-900 px-6 py-10 relative">
-           <div className="text-center mb-6">
-              <span className="text-gray-400 text-[10px] font-bold uppercase tracking-widest">A Evolução Necessária</span>
-              <h3 className="text-white font-black text-xl mt-1">Saia do Amadorismo</h3>
-           </div>
+      {/* =====================================================================================
+          NOVA SEÇÃO 2: COMPARATIVO (O ABISMO)
+      ===================================================================================== */}
+      <div className="bg-white px-6 py-10 relative">
+         <div className="text-center mb-8">
+            <h3 className="text-gray-900 font-black text-2xl">A Evolução Obrigatória</h3>
+            <p className="text-gray-500 text-xs mt-1">Quem não profissionaliza, quebra.</p>
+         </div>
 
-           <div className="grid grid-cols-2 gap-4">
-              {/* Lado Esquerdo: Jeito Velho */}
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
-                 <div className="w-10 h-10 mx-auto bg-red-500/20 rounded-full flex items-center justify-center mb-3">
-                    <FileText size={20} className="text-red-400" />
-                 </div>
-                 <h4 className="text-red-400 font-bold text-sm mb-2">Manual</h4>
-                 <ul className="text-[10px] text-gray-400 space-y-2 text-left px-1">
-                    <li className="flex gap-1.5"><span className="text-red-500">×</span> Erros de cálculo</li>
-                    <li className="flex gap-1.5"><span className="text-red-500">×</span> Perde anotações</li>
-                    <li className="flex gap-1.5"><span className="text-red-500">×</span> 3h p/ organizar</li>
-                 </ul>
-              </div>
+         <div className="grid grid-cols-2 gap-4">
+            {/* Lado Esquerdo: Jeito Velho */}
+            <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4 text-center opacity-70 grayscale">
+               <div className="w-10 h-10 mx-auto bg-gray-200 rounded-full flex items-center justify-center mb-3">
+                  <FileText size={20} className="text-gray-500" />
+               </div>
+               <h4 className="text-gray-500 font-bold text-sm mb-2 uppercase tracking-wide">Amador</h4>
+               <ul className="text-[10px] text-gray-400 space-y-2 text-left px-1">
+                  <li className="flex gap-1.5"><span className="text-red-400 font-bold">×</span> Erros de cálculo</li>
+                  <li className="flex gap-1.5"><span className="text-red-400 font-bold">×</span> Perde dados</li>
+                  <li className="flex gap-1.5"><span className="text-red-400 font-bold">×</span> 3h p/ organizar</li>
+               </ul>
+            </div>
 
-              {/* Lado Direito: Jeito Novo */}
-              <div className="bg-[#00A86B]/10 border border-[#00A86B] rounded-2xl p-4 text-center relative overflow-hidden">
-                 <div className="absolute top-0 right-0 w-8 h-8 bg-[#00A86B] rounded-bl-xl flex items-center justify-center">
-                    <CheckCircle2 size={14} className="text-white" />
-                 </div>
-                 <div className="w-10 h-10 mx-auto bg-[#00A86B]/20 rounded-full flex items-center justify-center mb-3">
-                    <Smartphone size={20} className="text-[#00A86B]" />
-                 </div>
-                 <h4 className="text-[#00A86B] font-bold text-sm mb-2">Automático</h4>
-                 <ul className="text-[10px] text-gray-300 space-y-2 text-left px-1">
-                    <li className="flex gap-1.5"><span className="text-[#00A86B]">✓</span> 100% Preciso</li>
-                    <li className="flex gap-1.5"><span className="text-[#00A86B]">✓</span> Tudo salvo na nuvem</li>
-                    <li className="flex gap-1.5"><span className="text-[#00A86B]">✓</span> 5 min por dia</li>
-                 </ul>
-              </div>
-           </div>
-        </div>
+            {/* Lado Direito: Jeito Novo */}
+            <div className="bg-white border-2 border-[#00A86B] rounded-2xl p-4 text-center relative shadow-xl transform scale-105 z-10">
+               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-[#00A86B] text-white text-[9px] font-black px-2 py-0.5 rounded uppercase">Recomendado</div>
+               <div className="w-10 h-10 mx-auto bg-[#00A86B]/10 rounded-full flex items-center justify-center mb-3">
+                  <Smartphone size={20} className="text-[#00A86B]" />
+               </div>
+               <h4 className="text-[#00A86B] font-bold text-sm mb-2 uppercase tracking-wide">Profissional</h4>
+               <ul className="text-[10px] text-gray-600 space-y-2 text-left px-1">
+                  <li className="flex gap-1.5"><span className="text-[#00A86B] font-bold">✓</span> 100% Preciso</li>
+                  <li className="flex gap-1.5"><span className="text-[#00A86B] font-bold">✓</span> Salvo na Nuvem</li>
+                  <li className="flex gap-1.5"><span className="text-[#00A86B] font-bold">✓</span> 5 min por dia</li>
+               </ul>
+            </div>
+         </div>
+      </div>
 
-        {/* =====================================================================================
-            NOVA SEÇÃO 3: SIMPLICIDADE (QUEBRA DE OBJEÇÃO)
-        ===================================================================================== */}
-        <div className="bg-white px-6 py-10 text-center">
-           <div className="inline-block p-3 bg-blue-50 rounded-full mb-4">
-              <MousePointerClick size={32} className="text-blue-600" />
-           </div>
-           <h3 className="text-xl font-black text-gray-900 mb-3">
-             "Mas eu não entendo de tecnologia..."
-           </h3>
-           <p className="text-gray-500 text-sm leading-relaxed max-w-[280px] mx-auto mb-6">
-             Fique tranquilo. A ferramenta foi criada para ser <strong>tão simples quanto enviar uma mensagem no WhatsApp</strong>.
-           </p>
+      {/* =====================================================================================
+          NOVA SEÇÃO 3: SIMPLICIDADE (QUEBRA DE OBJEÇÃO)
+      ===================================================================================== */}
+      <div className="bg-blue-50/50 px-6 py-10 text-center border-y border-blue-100">
+         <div className="inline-block p-3 bg-white rounded-full mb-4 shadow-sm">
+            <MousePointerClick size={28} className="text-blue-600" />
+         </div>
+         <h3 className="text-xl font-black text-gray-900 mb-3">
+           "Eu mal sei mexer no celular..."
+         </h3>
+         <p className="text-gray-600 text-sm leading-relaxed max-w-[280px] mx-auto mb-6 font-medium">
+           Fique tranquilo. Criamos o sistema para ser <strong>tão simples quanto enviar um áudio no WhatsApp</strong>.
+         </p>
 
-           <div className="flex justify-center gap-2 flex-wrap">
-              <div className="bg-gray-50 px-3 py-2 rounded-lg border border-gray-100 flex items-center gap-2">
-                 <LayoutTemplate size={14} className="text-gray-400" />
-                 <span className="text-xs font-bold text-gray-600">Visual Limpo</span>
-              </div>
-              <div className="bg-gray-50 px-3 py-2 rounded-lg border border-gray-100 flex items-center gap-2">
-                 <MousePointerClick size={14} className="text-gray-400" />
-                 <span className="text-xs font-bold text-gray-600">1 Clique</span>
-              </div>
-              <div className="bg-gray-50 px-3 py-2 rounded-lg border border-gray-100 flex items-center gap-2">
-                 <Bot size={14} className="text-gray-400" />
-                 <span className="text-xs font-bold text-gray-600">Assistente IA</span>
-              </div>
-           </div>
-        </div>
+         <div className="flex justify-center gap-2 flex-wrap">
+            <div className="bg-white px-3 py-2 rounded-lg border border-blue-100 flex items-center gap-2 shadow-sm">
+               <LayoutTemplate size={14} className="text-blue-400" />
+               <span className="text-xs font-bold text-gray-600">Botões Grandes</span>
+            </div>
+            <div className="bg-white px-3 py-2 rounded-lg border border-blue-100 flex items-center gap-2 shadow-sm">
+               <MousePointerClick size={14} className="text-blue-400" />
+               <span className="text-xs font-bold text-gray-600">1 Clique</span>
+            </div>
+         </div>
+      </div>
 
-        {/* =====================================================================================
-            2. PRODUCT REVEAL (MÃOS DO CAMPO)
-        ===================================================================================== */}
-        <div className="bg-[#004F2D] py-10 px-6 relative overflow-hidden">
-           {/* Background Pattern */}
-           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_2px,transparent_2px)] [background-size:20px_20px]"></div>
-           <div className="absolute top-0 right-0 w-32 h-32 bg-[#00A86B] blur-[60px] opacity-40"></div>
-           
-           <div className="relative z-10 text-center text-white">
-              <span className="text-[#00A86B] font-bold text-xs uppercase tracking-[0.2em] mb-3 block">Apresentando a Solução</span>
-              
-              <div className="flex items-center justify-center gap-3 mb-4">
-                 <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow-lg transform rotate-3">
-                    <Leaf className="text-[#004F2D]" size={28} />
-                 </div>
-                 <h2 className="text-3xl font-black leading-none text-white tracking-tight">
-                    MÃOS <br/> DO CAMPO
-                 </h2>
-              </div>
-              
-              <p className="text-gray-300 text-sm leading-relaxed max-w-[280px] mx-auto mb-6">
-                 O primeiro sistema operacional de bolso feito para o produtor que quer <strong>lucro</strong>, não papelada.
-              </p>
+      {/* =====================================================================================
+          2. PRODUCT REVEAL (MÃOS DO CAMPO)
+      ===================================================================================== */}
+      <div className="bg-[#004F2D] py-12 px-6 relative overflow-hidden">
+         {/* Background Pattern */}
+         <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_2px,transparent_2px)] [background-size:20px_20px]"></div>
+         <div className="absolute top-0 right-0 w-32 h-32 bg-[#00A86B] blur-[60px] opacity-40"></div>
+         
+         <div className="relative z-10 text-center text-white">
+            <span className="text-[#00A86B] font-bold text-xs uppercase tracking-[0.2em] mb-3 block animate-pulse">A Solução Definitiva</span>
+            
+            <div className="flex items-center justify-center gap-3 mb-6">
+               <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-[0_0_30px_rgba(255,255,255,0.3)] transform rotate-3 border-2 border-[#00A86B]">
+                  <Leaf className="text-[#004F2D]" size={32} />
+               </div>
+               <h2 className="text-4xl font-black leading-none text-white tracking-tight drop-shadow-xl">
+                  MÃOS <br/> DO CAMPO
+               </h2>
+            </div>
+            
+            <p className="text-gray-200 text-sm leading-relaxed max-w-[280px] mx-auto mb-8 font-medium">
+               O primeiro sistema operacional de bolso feito para o produtor que quer <strong>lucro real</strong>, não apenas trabalho duro.
+            </p>
 
-              <button onClick={scrollToPlans} className="w-full bg-white text-[#004F2D] font-black py-3 rounded-lg text-sm shadow-xl flex items-center justify-center gap-2 transform active:scale-95 transition-transform">
-                 <Smartphone size={18} />
-                 BAIXAR E RESOLVER AGORA
-              </button>
-           </div>
-        </div>
+            <button onClick={scrollToPlans} className="w-full bg-white text-[#004F2D] font-black py-4 rounded-xl text-sm shadow-xl flex items-center justify-center gap-2 transform active:scale-95 transition-transform hover:bg-gray-100">
+               <Smartphone size={20} />
+               QUERO BLINDAR MINHA LAVOURA
+            </button>
+         </div>
       </div>
 
       {/* =====================================================================================
@@ -245,36 +254,34 @@ const Results: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 gap-4 mb-8">
-           {/* Feature 1 */}
            <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex gap-4 items-center">
               <div className="bg-green-100 p-3 rounded-xl text-[#004F2D]">
                  <Sprout size={24} strokeWidth={2.5} />
               </div>
               <div>
                  <h3 className="font-bold text-gray-900 text-sm">Gestão de Etapas</h3>
-                 <p className="text-xs text-gray-500 mt-1">Nunca mais perca o timing de uma aplicação. Controle do plantio à colheita.</p>
+                 <p className="text-xs text-gray-500 mt-1">Controle do plantio à colheita. Nunca mais perca o timing de aplicação.</p>
               </div>
            </div>
-           {/* Feature 2 */}
            <div className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex gap-4 items-center">
               <div className="bg-green-100 p-3 rounded-xl text-[#004F2D]">
                  <PieChart size={24} strokeWidth={2.5} />
               </div>
               <div>
-                 <h3 className="font-bold text-gray-900 text-sm">Financeiro Real</h3>
-                 <p className="text-xs text-gray-500 mt-1">Saiba o custo exato por hectare e o lucro líquido previsto.</p>
+                 <h3 className="font-bold text-gray-900 text-sm">Lucro na Ponta do Lápis</h3>
+                 <p className="text-xs text-gray-500 mt-1">Saiba o custo exato por hectare e a previsão de lucro líquido.</p>
               </div>
            </div>
         </div>
 
         {/* TONICO AI HIGHLIGHT */}
-        <div className="bg-gray-900 rounded-3xl p-1 shadow-2xl mb-12 relative overflow-hidden">
-           <div className="bg-gradient-to-b from-gray-800 to-gray-900 rounded-[28px] p-6 relative z-10">
+        <div className="bg-slate-900 rounded-3xl p-1 shadow-2xl mb-12 relative overflow-hidden">
+           <div className="bg-gradient-to-b from-slate-800 to-slate-900 rounded-[28px] p-6 relative z-10">
              <div className="absolute top-4 right-4 animate-pulse"><Bot className="text-[#00A86B]" size={32} /></div>
              
              <h3 className="text-xl font-black text-white mb-2">Tonico AI Integrado</h3>
              <p className="text-sm text-gray-300 mb-6 leading-relaxed">
-               Seu "Agrônomo Digital" 24 horas. Tire dúvidas técnicas, peça recomendações de dosagem e receba alertas climáticos baseados em IA.
+               Seu "Agrônomo Digital" 24 horas. Tire dúvidas técnicas, peça recomendações de dosagem e receba alertas climáticos.
              </p>
              
              <div className="flex flex-wrap gap-2">
@@ -327,63 +334,72 @@ const Results: React.FC = () => {
         </div>
 
         {/* =====================================================================================
-            5. BÔNUS REFORMULADOS (PREMIUM DARK STYLE)
+            5. BÔNUS REFORMULADOS (VISUAL IMPACTANTE)
         ===================================================================================== */}
         <div className="mb-12">
            <div className="text-center mb-4">
-              <span className="inline-block bg-[#00A86B] text-white text-[10px] font-black uppercase px-3 py-1 rounded-full mb-2 tracking-widest">Oferta Limitada</span>
-              <h3 className="font-black text-gray-900 text-xl">Leve R$ 900,00 em Bônus</h3>
-              <p className="text-xs text-gray-500 mt-1">Gratuito exclusivamente no plano <strong className="text-black">Vitalício</strong></p>
+              <span className="inline-block bg-[#00A86B] text-white text-[10px] font-black uppercase px-3 py-1 rounded-full mb-2 tracking-widest">Apenas Hoje</span>
+              <h3 className="font-black text-gray-900 text-xl">Pacote de Aceleração</h3>
+              <p className="text-xs text-gray-500 mt-1">Exclusivo para o plano <strong className="text-black">Vitalício</strong></p>
            </div>
            
            {/* Premium Bonus Container */}
-           <div className="bg-[#1A1A1A] rounded-3xl p-6 relative overflow-hidden shadow-2xl">
-              {/* Gold decorative accent */}
-              <div className="absolute top-0 right-0 w-40 h-40 bg-yellow-500 rounded-full blur-[80px] opacity-20"></div>
+           <div className="bg-[#111] rounded-3xl p-6 relative overflow-hidden shadow-2xl border border-gray-800">
+              <div className="absolute top-0 right-0 w-48 h-48 bg-yellow-500/20 rounded-full blur-[60px]"></div>
 
               <div className="space-y-4 relative z-10">
                   {/* Bonus 1 */}
-                  <div className="flex gap-4 items-center bg-white/5 border border-white/10 p-4 rounded-xl backdrop-blur-sm">
-                    <div className="h-10 w-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center shrink-0 shadow-lg text-black">
+                  <div className="flex gap-4 items-center bg-white/5 border border-white/10 p-4 rounded-xl">
+                    <div className="h-10 w-10 bg-yellow-500 rounded-lg flex items-center justify-center shrink-0 shadow-lg text-black">
                         <PlayCircle size={20} />
                     </div>
                     <div>
                         <h4 className="font-bold text-white text-sm">Masterclass: Lucro Máximo</h4>
-                        <p className="text-[10px] text-gray-400">Estratégia avançada de margem</p>
-                        <p className="text-[10px] font-bold text-yellow-400 mt-1">Economize R$ 297,00</p>
+                        <div className="flex items-center gap-2 mt-1">
+                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-2">R$ 297,00</span>
+                           <span className="text-xs font-black text-green-400 uppercase">Grátis</span>
+                        </div>
                     </div>
                   </div>
 
                   {/* Bonus 2 */}
-                  <div className="flex gap-4 items-center bg-white/5 border border-white/10 p-4 rounded-xl backdrop-blur-sm">
-                    <div className="h-10 w-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center shrink-0 shadow-lg text-black">
+                  <div className="flex gap-4 items-center bg-white/5 border border-white/10 p-4 rounded-xl">
+                    <div className="h-10 w-10 bg-yellow-500 rounded-lg flex items-center justify-center shrink-0 shadow-lg text-black">
                         <FileText size={20} />
                     </div>
                     <div>
                         <h4 className="font-bold text-white text-sm">Guia: Imposto Rural</h4>
-                        <p className="text-[10px] text-gray-400">Dedução legal de gastos</p>
-                        <p className="text-[10px] font-bold text-yellow-400 mt-1">Economize R$ 197,00</p>
+                        <div className="flex items-center gap-2 mt-1">
+                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-2">R$ 197,00</span>
+                           <span className="text-xs font-black text-green-400 uppercase">Grátis</span>
+                        </div>
                     </div>
                   </div>
 
                   {/* Bonus 3 */}
-                  <div className="flex gap-4 items-center bg-white/5 border border-white/10 p-4 rounded-xl backdrop-blur-sm">
-                    <div className="h-10 w-10 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-lg flex items-center justify-center shrink-0 shadow-lg text-black">
+                  <div className="flex gap-4 items-center bg-white/5 border border-white/10 p-4 rounded-xl">
+                    <div className="h-10 w-10 bg-yellow-500 rounded-lg flex items-center justify-center shrink-0 shadow-lg text-black">
                         <Headphones size={20} />
                     </div>
                     <div>
                         <h4 className="font-bold text-white text-sm">Implantação VIP</h4>
-                        <p className="text-[10px] text-gray-400">Suporte prioritário de setup</p>
-                        <p className="text-[10px] font-bold text-yellow-400 mt-1">Economize R$ 406,00</p>
+                        <div className="flex items-center gap-2 mt-1">
+                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-2">R$ 406,00</span>
+                           <span className="text-xs font-black text-green-400 uppercase">Grátis</span>
+                        </div>
                     </div>
                   </div>
               </div>
               
-              <div className="mt-6 pt-4 border-t border-white/10 text-center">
-                 <p className="text-white text-xs font-medium">
-                    Valor total dos presentes: <span className="text-yellow-400 font-bold text-sm">R$ 900,00</span>
-                 </p>
-                 <p className="text-[10px] text-gray-500 mt-1">Sua conta sai por <span className="text-white">R$ 0,00</span> hoje.</p>
+              <div className="mt-8 pt-6 border-t border-white/10 flex justify-between items-end">
+                 <div>
+                    <p className="text-gray-400 text-[10px] uppercase tracking-widest font-bold">Valor Total</p>
+                    <p className="text-2xl font-black text-white line-through decoration-red-500 decoration-4 opacity-50">R$ 900</p>
+                 </div>
+                 <div className="text-right">
+                    <p className="text-gray-400 text-[10px] uppercase tracking-widest font-bold">Você Paga</p>
+                    <p className="text-4xl font-black text-[#00A86B] neon-text">R$ 0,00</p>
+                 </div>
               </div>
            </div>
         </div>

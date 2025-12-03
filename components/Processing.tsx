@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Loader2, Bot, CheckCircle2, Satellite, Wifi, Lock } from 'lucide-react';
+import { Bot, CheckCircle2, Satellite, Wifi, Lock } from 'lucide-react';
 
 interface ProcessingProps {
   onComplete: () => void;

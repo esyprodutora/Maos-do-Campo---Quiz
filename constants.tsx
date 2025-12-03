@@ -1,7 +1,6 @@
 import { Question } from './types';
 
 // Optimized images (w=600, q=60) for faster mobile loading
-// Images selected to reflect "Alone in the field" or "Manual labor" vibes
 export const QUIZ_QUESTIONS: Question[] = [
   {
     id: 1,
@@ -9,7 +8,7 @@ export const QUIZ_QUESTIONS: Question[] = [
     backgroundImage: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=60&w=600&auto=format&fit=crop",
     insight: "⚠️ O 'caderninho' esconde erros de cálculo que somam até 15% de prejuízo por safra.",
     options: [
-      { label: "Caderninho / Papel de Pão", value: "notebook", icon: "NotebookPen" },
+      { label: "Caderninho / Papel de Pão", value: "notebook", icon: "BookOpen" },
       { label: "De cabeça / Memória", value: "memory", icon: "XCircle" },
       { label: "Planilha no Computador", value: "excel", icon: "FileSpreadsheet" },
       { label: "Aplicativo de Gestão", value: "app", icon: "Smartphone" },
@@ -22,9 +21,9 @@ export const QUIZ_QUESTIONS: Question[] = [
     insight: "📦 Estoque sem controle gera compras duplicadas e abre brecha para desperdícios ou furtos.",
     options: [
       { label: "Sei de cabeça", value: "memory", icon: "HelpCircle" },
-      { label: "Tenho anotado, mas desatualizado", value: "outdated", icon: "NotebookPen" },
-      { label: "Não sei, preciso ir lá contar", value: "no", icon: "PackageSearch" },
-      { label: "Controle total e atualizado", value: "yes", icon: "CheckCircle2" },
+      { label: "Tenho anotado, mas desatualizado", value: "outdated", icon: "BookOpen" },
+      { label: "Não sei, preciso ir lá contar", value: "no", icon: "Package" },
+      { label: "Controle total e atualizado", value: "yes", icon: "CheckCircle" },
     ],
   },
   {
@@ -33,7 +32,7 @@ export const QUIZ_QUESTIONS: Question[] = [
     backgroundImage: "https://images.unsplash.com/photo-1628155930542-3c7a64e2c833?q=60&w=600&auto=format&fit=crop",
     insight: "👥 Falhas no apontamento de horas e diárias são a causa nº 1 de processos trabalhistas no campo.",
     options: [
-      { label: "Anoto num caderno no fim do dia", value: "notebook", icon: "NotebookPen" },
+      { label: "Anoto num caderno no fim do dia", value: "notebook", icon: "BookOpen" },
       { label: "Confio na memória", value: "memory", icon: "Users" },
       { label: "Marco na folha de ponto", value: "paper", icon: "FileSpreadsheet" },
       { label: "Registro digital automático", value: "app", icon: "Smartphone" },
@@ -79,7 +78,7 @@ export const QUIZ_QUESTIONS: Question[] = [
     backgroundImage: "https://images.unsplash.com/photo-1611095790444-1dfa35e37b52?q=60&w=600&auto=format&fit=crop",
     insight: "📊 Vender na emoção ou necessidade faz o produtor perder as altas do mercado.",
     options: [
-      { label: "Quando preciso de dinheiro", value: "need", icon: "Wallet" },
+      { label: "Quando preciso de dinheiro", value: "need", icon: "CreditCard" },
       { label: "Quando o vizinho vende", value: "neighbor", icon: "Users" },
       { label: "Acompanho cotações e custo", value: "data", icon: "TrendingUp" },
     ],
@@ -92,7 +91,7 @@ export const QUIZ_QUESTIONS: Question[] = [
     options: [
       { label: "É tudo a mesma conta", value: "mixed", icon: "XCircle" },
       { label: "Tento separar, mas misturo", value: "try", icon: "HelpCircle" },
-      { label: "Totalmente separadas", value: "separated", icon: "CheckCircle2" },
+      { label: "Totalmente separadas", value: "separated", icon: "CheckCircle" },
     ],
   },
   {
@@ -103,7 +102,7 @@ export const QUIZ_QUESTIONS: Question[] = [
     options: [
       { label: "Confio na memória", value: "memory", icon: "HelpCircle" },
       { label: "Olho na embalagem vazia", value: "trash", icon: "Search" },
-      { label: "Tenho tudo registrado", value: "yes", icon: "CalendarClock" },
+      { label: "Tenho tudo registrado", value: "yes", icon: "Calendar" },
     ],
   },
   {

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Question, Option } from '../types';
 import { 
-  NotebookPen, XCircle, FileSpreadsheet, Smartphone, 
-  CheckCircle2, HelpCircle, Search, Coins, AlertTriangle, 
-  Sprout, Tractor, Users, Droplets, PackageSearch, 
-  TrendingUp, CalendarClock, DollarSign, Leaf,
-  Wheat, Coffee, Carrot, Gavel, Wallet
+  BookOpen, XCircle, FileSpreadsheet, Smartphone, 
+  CheckCircle, HelpCircle, Search, Coins, AlertTriangle, 
+  Sprout, Tractor, Users, Droplets, Package, 
+  TrendingUp, Calendar, DollarSign, Leaf,
+  Wheat, Coffee, Carrot, CreditCard
 } from 'lucide-react';
 
 interface QuizQuestionProps {
@@ -14,19 +14,20 @@ interface QuizQuestionProps {
   progress: number;
 }
 
-// Explicit mapping to prevent build/tree-shaking errors (Fixes White Screen)
+// Explicit mapping with SAFE standard icons to prevent build errors
 const ICON_MAP: Record<string, React.ElementType> = {
-  NotebookPen, XCircle, FileSpreadsheet, Smartphone,
-  CheckCircle2, HelpCircle, Search, Coins, AlertTriangle,
-  Sprout, Tractor, Users, Droplets, PackageSearch,
-  TrendingUp, CalendarClock, DollarSign, Leaf,
-  Wheat, Coffee, Carrot, Gavel, Wallet
+  BookOpen, XCircle, FileSpreadsheet, Smartphone,
+  CheckCircle, HelpCircle, Search, Coins, AlertTriangle,
+  Sprout, Tractor, Users, Droplets, Package,
+  TrendingUp, Calendar, DollarSign, Leaf,
+  Wheat, Coffee, Carrot, CreditCard
 };
 
 const QuizQuestion: React.FC<QuizQuestionProps> = ({ data, onAnswer, progress }) => {
   
   const renderIcon = (iconName: string) => {
     const Icon = ICON_MAP[iconName];
+    // Fallback if icon missing
     return Icon ? <Icon size={24} strokeWidth={2} /> : <div className="w-6 h-6 rounded-full bg-gray-200" />;
   };
 
