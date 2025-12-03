@@ -356,7 +356,7 @@ const Results: React.FC = () => {
                     <div>
                         <h4 className="font-bold text-white text-sm">Masterclass: Lucro Máximo</h4>
                         <div className="flex items-center gap-2 mt-1">
-                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-1">R$ 297,00</span>
+                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-[0.5px]">R$ 297,00</span>
                            <span className="text-xs font-black text-green-400 uppercase">Grátis</span>
                         </div>
                     </div>
@@ -370,7 +370,7 @@ const Results: React.FC = () => {
                     <div>
                         <h4 className="font-bold text-white text-sm">Guia: Imposto Rural</h4>
                         <div className="flex items-center gap-2 mt-1">
-                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-1">R$ 197,00</span>
+                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-[0.5px]">R$ 197,00</span>
                            <span className="text-xs font-black text-green-400 uppercase">Grátis</span>
                         </div>
                     </div>
@@ -384,7 +384,7 @@ const Results: React.FC = () => {
                     <div>
                         <h4 className="font-bold text-white text-sm">Implantação VIP</h4>
                         <div className="flex items-center gap-2 mt-1">
-                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-1">R$ 406,00</span>
+                           <span className="text-xs text-gray-500 line-through decoration-red-500 decoration-[0.5px]">R$ 406,00</span>
                            <span className="text-xs font-black text-green-400 uppercase">Grátis</span>
                         </div>
                     </div>
@@ -394,7 +394,7 @@ const Results: React.FC = () => {
               <div className="mt-8 pt-6 border-t border-white/10 flex justify-between items-end">
                  <div>
                     <p className="text-gray-400 text-[10px] uppercase tracking-widest font-bold">Valor Total</p>
-                    <p className="text-2xl font-black text-white line-through decoration-red-500 decoration-1 opacity-50">R$ 900</p>
+                    <p className="text-2xl font-black text-white line-through decoration-red-500 decoration-[0.5px] opacity-50">R$ 900</p>
                  </div>
                  <div className="text-right">
                     <p className="text-gray-400 text-[10px] uppercase tracking-widest font-bold">Você Paga</p>
