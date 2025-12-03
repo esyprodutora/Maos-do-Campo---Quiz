@@ -195,7 +195,7 @@ const Results: React.FC = () => {
            "Eu mal sei mexer no celular..."
          </h3>
          <p className="text-gray-600 text-sm leading-relaxed max-w-[280px] mx-auto mb-6 font-medium">
-           Fique tranquilo. Criamos o sistema para ser <strong>tão simples quanto enviar um áudio no WhatsApp</strong>.
+           Fique tranquilo. Criamos o sistema para ser <strong>tão simples quanto enviar uma mensagem no WhatsApp</strong>.
          </p>
 
          <div className="flex justify-center gap-2 flex-wrap">
